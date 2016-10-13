@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Coches!{{tipo}}{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}<h1> Coche {{tipo}}</h1><br>
+        <div>
+        {% if tipo=='moderno' %}
+            <img src="{{asset('img/moderno.jpg')}}"><br><br>
+        {% elseif tipo=='clasico' %}
+        <img src="{{asset('img/clasico.jpg')}}"><br><br>
+        {% endif %}
+        <a class="boton" href="/">Atras</a>
+        </div>
+        {% endblock %}
+    </body>
+</html>

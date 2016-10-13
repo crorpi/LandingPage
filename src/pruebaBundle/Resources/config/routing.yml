@@ -1,0 +1,9 @@
+prueba_homepage:
+    path:     /
+    defaults: { _controller: pruebaBundle:Default:index }
+
+prueba_tipo:
+    path:     /producto/{tipo}
+    defaults: { _controller: pruebaBundle:Default:producto }
+
+
